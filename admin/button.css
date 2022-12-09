@@ -1,0 +1,66 @@
+.btn{
+    
+    padding: .4em .8em;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.8em;
+   
+    display: inline-flex;
+    align-items: center;
+   
+    transition: background-color .5s;
+/* 모든 버튼의 공통 스타일 */
+}
+.btn-toggle{
+    --radius: 80px;
+    background-color: gray;
+    color:#434343;
+    border : none;
+
+    text-indent: -999px;
+    overflow:hidden;
+    box-sizing: border-box;
+    width: calc(var(--radius) * 2);
+    height: var(--radius);
+    /* border-radius: calc(var(--radius)/2); */
+    /* border-radius : calc(var(--radius)/2); */
+    border-top-left-radius: calc(var(--radius)/2);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(var(--radius)/2);
+    border-bottom-right-radius: 0;
+    /* border: 1px solid black; */
+
+    position: relative;
+
+    transition : all 1.5s;
+    
+}
+.btn-toggle::before{
+    content: 'hahaha';
+    height: calc(var(--radius) - 10px);
+    width: calc(var(--radius) - 10px);
+    box-sizing: border-box;
+    border-radius: calc((var(--radius) -4px)/2);
+    background-color: black;
+    text-indent: -999px;
+    
+    position: absolute;
+    left: 2px;
+
+    transition : all 1.5s;
+    
+}
+
+/* ---------화면에 따른 버튼 조정------------- */
+
+@media (min-width: 500px){
+    .btn-toggle-md{
+        --radius:30px;
+    }
+}
+
+@media (min-width: 800px){
+    .btn-toggle{
+        --radius:100px;
+    }
+}

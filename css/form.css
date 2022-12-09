@@ -1,0 +1,36 @@
+.input{
+    /* input.type-Text  */
+
+}
+button{
+    /* 버튼 정사각형 */
+    /* padding: 0; */
+}
+/* 
+.input-chk{
+    display: inline-block;
+    width:12px;
+    height:12px;
+    border: 1px solid #A24F17;
+
+}
+
+.input-chk-on{
+    background-color:#A24F17;
+}
+
+.menu-option{
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.menu-option .input-chk{
+    margin-right: 5px;
+}
+.menu-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px; 
+    object-fit: cover;
+} */

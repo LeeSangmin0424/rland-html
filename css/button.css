@@ -1,0 +1,116 @@
+/* 페이지에서 사용하는 버튼을 모아둔곳 */
+
+.btn{
+    
+    padding: .4em .8em;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.8em;
+   
+    display: inline-flex;
+    align-items: center;
+   
+    transition: background-color .5s;
+/* 모든 버튼의 공통 스타일 */
+}
+/* 버튼에는 다양한 스타일이 버튼이 있기 마련인데
+버튼이 한종류만 있는 경우는
+굳이 파일로 따로 만들 필요는 없고
+style.css에 만들어 놓아도 될 것 같아요
+ */
+.btn:hover{
+    background-color: #f71212;
+}
+
+ .btn-ok{
+/* ok버튼만의 특화된 스타일 */
+ }
+ .btn-ok:hover{
+    background-color: #ff3232;
+}
+.btn-toggle{
+    --radius: 80px;
+    background-color: gray;
+    color:#434343;
+    border : none;
+
+    text-indent: -999px;
+    overflow:hidden;
+    box-sizing: border-box;
+    width: calc(var(--radius) * 2);
+    height: var(--radius);
+    /* border-radius: calc(var(--radius)/2); */
+    /* border-radius : calc(var(--radius)/2); */
+    border-top-left-radius: calc(var(--radius)/2);
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(var(--radius)/2);
+    border-bottom-right-radius: 0;
+    /* border: 1px solid black; */
+
+    position: relative;
+
+    transition : all 1.5s;
+    
+}
+.btn-toggle::before{
+    content: 'hahaha';
+    height: calc(var(--radius) - 10px);
+    width: calc(var(--radius) - 10px);
+    box-sizing: border-box;
+    border-radius: calc((var(--radius) -4px)/2);
+    background-color: black;
+    text-indent: -999px;
+    
+    position: absolute;
+    left: 2px;
+
+    transition : all 1.5s;
+    
+}
+
+/**/
+.btn-toggle:hover,
+.btn-toggle-on{
+    background-color: #55955e;
+    
+    border-top-left-radius: 0;
+    border-top-right-radius: calc(var(--radius)/2);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: calc(var(--radius)/2);
+    
+}
+
+.btn-toggle-on::before{
+    background-color: #9dffaa;
+    left: 80px;
+}
+
+ .btn-cancel{
+    border-radius: 20px;
+    border: 1px solid #A24F17;
+ }
+
+ .btn-strong{
+
+ }
+
+
+
+
+ /* .btn-default{
+    border-radius: 20px;
+    border: 1px solid #A24F17;
+
+} */
+
+/*배경이 있는 주황색 버튼*/
+/* .btn-default-fill{
+    background-color: #A24F17;
+
+}  */
+
+/*배경이 없는 주황색 버튼*/
+/* .btn-blank-line{
+    background-color: #fff;
+    color: #000;
+} */

@@ -1,0 +1,50 @@
+html{
+    height :100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height : 100%;
+}
+.header{
+    background-color: yellow;
+}
+
+.body{
+    background-color: gray;
+    display : flex;
+    flex-direction : column;
+    height : 100%;
+}
+
+.aside{
+    background-color: green;
+}
+
+.main{
+    display: flex;
+    background-color: rgb(45, 66, 13);
+    flex-grow :1;
+}
+
+.footer{
+    bottom : 0;
+    background-color: bisque;
+}
+
+/* ---------화면 750------------- */
+@media (min-width: 576px){
+    /* .body{    
+        flex-direction: row;
+    } */
+    .main{
+        background-color: antiquewhite;
+    }
+}
+
+@media (min-width: 768px){
+    .body{    
+        flex-direction: row;
+    }
+}
